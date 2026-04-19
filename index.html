@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LokahiPis</title>
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: hsl(51, 100%, 90%);
+            font-family: sans-serif;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            width: clamp(60px, 10vw, 120px);
+            height: auto;
+            object-fit: contain;
+            animation-name: slideLogo;
+            animation-duration: 0.8s;
+        }
+
+@keyframes slideLogo {
+    0% {
+        transform: translateX(550px);
+    }
+}
+        .title-section {
+            text-align: center;
+            padding: 10px 20px 0;
+        }
+
+        .site-title {
+            font-size: clamp(2.5rem, 8vw, 6.25rem); /* 100px max */
+            font-weight: bold;
+            color: #131313;
+            text-decoration: underline;
+            line-height: 1.1;
+        }
+
+        .description {
+            max-width: 900px;
+            margin: 24px auto 0;
+            padding: 0 20px;
+            color: #131313;
+            font-size: clamp(1rem, 2.5vw, 1.875rem); /* 30px max */
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .description2 {
+            max-width: 900px;
+            margin: 24px auto 0;
+            padding: 0 20px;
+            color: #131313;
+            font-size: clamp(1rem, 2.5vw, 1.875rem);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .buttons-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin: 40px auto;
+            padding: 0 20px;
+            max-width: 1400px;
+        }
+
+        .neu-button {
+            background-color: #000000;
+            background-image: linear-gradient(43deg, #05d1b6 0%, #16d49b 46%, #00ccff 100%);
+            border-radius: 50px;
+            box-shadow: inset 4px 4px 10px #69c7c2, inset -4px -4px 10px #ffffff;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: clamp(14px, 1.5vw, 18px);
+            padding: clamp(20px, 3vw, 40px) clamp(40px, 6vw, 90px);
+            transition: all 0.2s ease-in-out;
+            border: 2px solid rgb(163, 241, 255);
+            white-space: nowrap;
+            animation-name: slide1;
+            animation-duration: 1s;
+        }
+@keyframes slide1 {
+    0% {
+        transform: translateX(-550px);
+    }
+}
+
+        .neu-button:hover {
+            box-shadow: inset 2px 2px 5px #ffffff, inset -2px -2px 5px #5f5f5f,
+                        2px 2px 5px #777777, -2px -2px 5px #464646;
+            transform: translateY(-5px);
+        }
+
+        .neu-button2 {
+            background-color: #000000;
+            background-image: linear-gradient(43deg, #ffe600 0%, #d1a820 46%, #a56300 100%);
+            border-radius: 50px;
+            box-shadow: inset 4px 4px 10px #eedd7b, inset -4px -4px 10px #fbffbd;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: clamp(14px, 1.5vw, 18px);
+            padding: clamp(20px, 3vw, 40px) clamp(40px, 6vw, 90px);
+            transition: all 0.2s ease-in-out;
+            border: 2px solid rgb(255, 243, 139);
+            white-space: nowrap;
+            animation-name: slide2;
+            animation-duration: 0.5s;
+        }
+@keyframes slide2 {
+    0% {
+        transform: translatey(550px);
+    }
+}
+
+        .neu-button2:hover {
+            box-shadow: inset 2px 2px 5px #ffffff, inset -2px -2px 5px #5f5f5f,
+                        2px 2px 5px #777777, -2px -2px 5px #464646;
+            transform: translateY(-5px);
+        }
+
+        .neu-button2:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 5px #797979, inset -2px -2px 5px #272727,
+                        2px 2px 5px #222222, -2px -2px 5px #272727;
+        }
+
+        .neu-button3 {
+            background-color: #ffffff;
+            background-image: linear-gradient(43deg, #05d1b6 0%, #16d49b 46%, #00ccff 100%);
+            border-radius: 50px;
+            box-shadow: inset 4px 4px 10px #9cfffa, inset -4px -4px 10px #14e4ff;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: clamp(14px, 1.5vw, 18px);
+            padding: clamp(20px, 3vw, 40px) clamp(40px, 6vw, 90px);
+            transition: all 0.2s ease-in-out;
+            border: 2px solid rgb(255, 255, 255);
+            white-space: nowrap;
+            animation-name: slide3;
+            animation-duration: 1s;
+        }
+@keyframes slide3 {
+    0% {
+        transform: translateX(550px);
+    }
+}
+
+        .neu-button3:hover {
+            box-shadow: inset 2px 2px 5px #ffffff, inset -2px -2px 5px #5f5f5f,
+                        2px 2px 5px #777777, -2px -2px 5px #464646;
+            transform: translateY(-5px);
+        }
+
+        .neu-button3:focus {
+            outline: none;
+            box-shadow: inset 2px 2px 5px #797979, inset -2px -2px 5px #272727,
+                        2px 2px 5px #222222, -2px -2px 5px #272727;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        @media (max-width: 900px) {
+            .buttons-row {
+                gap: 16px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .buttons-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .neu-button,
+            .neu-button2,
+            .neu-button3 {
+                width: 80vw;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+    <header class="header">
+        <img class="logo" src="just-logo-1_edited.avif" alt="LokahiPis logo">
+    </header>
+
+
+    <section class="title-section">
+        <h1 class="site-title">LokahiPis</h1>
+    </section>
+
+
+    <div class="description">
+        <p>LokahiPis je školní časopis, na kterém se podílí žáci školy Lokahi. V časopise najdete články které informují o dění ve škole a o akcích, kterých se žáci zúčastnili.
+        Dále jsou zde i články o různých tématech, které žáky zajímají. Časopis vychází jednou za půl roku (přibližně) a je k dispozici v tištěné podobě i online.</p>
+    </div>
+
+
+    <div class="description2">
+        <p>Bohužel, ke dnešnímu dni není k dispozici jakákoliv stopa po LokahiPis 1.</p>
+    </div>
+
+
+    <div class="buttons-row">
+        <a href="LokahiPis 2-1.html">
+            <button class="neu-button">LokahiPis 2</button>
+        </a>
+        <a href="LokahiPis 3-1.html">
+            <button class="neu-button2">LokahiPis 3</button>
+        </a>
+        <a href="LokahiPis 4-1.html">
+            <button class="neu-button3">LokahiPis 4</button>
+        </a>
+    </div>
+</body>
+</html>
